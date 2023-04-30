@@ -75,13 +75,13 @@ is a pure `jupyter-lab notebook` importing some `python` libraries (`pandas`, `n
 
 ## Result
 We produce a small diagram of the solar system's planets, see the notebook.
-<!--
+
 <a href="solar_system.png" target="_blank">
 <figure>
     <img src="solar_system.png"
          alt="Solar system's planets">
 </figure>
 </a>
--->
+
 <!--    <figcaption>Solar System's planets</figcaption> -->
 
