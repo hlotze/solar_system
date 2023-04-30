@@ -1,0 +1,12 @@
+object;diameter_in_km;mio_km_from_sun;color
+Mercury;4879;57.90;orangered
+Venus;12104;108.20;darkorange
+Earth;12756;149.60;blue
+Moon;3475;0.38;brown
+Mars;6792;228.00;darkred
+Jupiter;142984;778.50;peru
+Saturn;120536;1432.00;burlywood
+Uranus;51118;2867.00;lightblue
+Neptune;49528;4515.00;cornflowerblue
+Pluto;2376;5906.40;dimgray
+Sun;1392700;0.0;yellow
