@@ -61,16 +61,16 @@ is a pure `jupyter-lab notebook` importing some `python` libraries (`pandas`, `n
 ``` python 
     def get_data_from_csv(fn : str, 
                           df : pd.DataFrame) 
-        -> pd.DataFrame
+        -> pd.DataFrame:
     
     def gen_planets_as_circles(df: pd.DataFrame) 
-        -> (np.array, np.array)
+        -> (np.array, np.array):
     
     def gen_diagram(fig: plt.figure, 
                     ax: plt.axes, 
                     vals: np.array, 
                     df: pd.DataFrame) 
-        -> plt.figure
+        -> plt.figure:
 ```
 
 ## Result
