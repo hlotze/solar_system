@@ -74,7 +74,7 @@ is a pure `jupyter-lab notebook` importing some `python` libraries (`pandas`, `n
 ```
 
 ## Result
-We produce a small diagram of the solar system's planets, see the notebook.
+We produce a small diagram of the solar systems' planets, see the notebook.
 
 <a href="solar_system.png" target="_blank">
 <figure>
@@ -84,4 +84,3 @@ We produce a small diagram of the solar system's planets, see the notebook.
 </a>
 
 <!--    <figcaption>Solar System's planets</figcaption> -->
-
