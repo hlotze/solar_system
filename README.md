@@ -12,7 +12,7 @@ You can not have the same scale for the objects'
     - Mercury:   4.879 km
     - Jupiter: 142.984 km. The diameter of Mercury fits about 30 times into the diameter of Jupiter.
 
-Distances and planets' diameters are scalled different. The diagramm shows the planets' diameter 2.500 times bigger than the distances from sun. That means they should be 2.500 times smaller than actually drawn, but if so - you will get for all of them just a point, unable to compare the planets' sizing.
+Distances and planets' diameters are scalled different. The diagram shows the planets' diameter 2.500 times bigger than the distances from sun. That means they should be 2.500 times smaller than actually drawn, but if so - you will get for all of them just a point, unable to compare the planets' sizing.
   
 The distances, with its Million km, we will match with the speed of light 
 -   299.792 km / sec, equivalent to
@@ -35,7 +35,7 @@ using `Python` with `pandas`, `numpy` and `matplotlib`
 
 ## Data used
 
-Originally our `Jupyter notebook` acesses the data via `pandas` and the `mysql.connector` from a `mariadb` - testing the `jupyter-lab` instead of the `jupyter notebook`, and kernels for `octave`, `gnuplot` and `mariadb`, this projekt was a proof of concept of the server's setup - and it works within our LAN. 
+Originally our `Jupyter notebook` acesses the data via `pandas` and the `mysql.connector` from a `mariadb` - testing the `jupyter-lab` instead of the `jupyter notebook`, and kernels for `octave`, `gnuplot` and `mariadb`, this project was a pmy "pilot" on the server's setup - and it works within our LAN. 
 
 You can take the csv file and use <a href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html">pandas.read_csv</a> to work with the data - as done here.
 
