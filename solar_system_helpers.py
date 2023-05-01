@@ -46,12 +46,14 @@ def gen_diagram(fig: plt.figure, ax: plt.axes, vals: np.array, df: pd.DataFrame)
     # the planets as Circles
     for p in circles[1:]:
         ax.add_patch(p)
-    # the sun
-    ax.add_patch(plt.Rectangle((-1000,-1000), 1000+10, 2000, color='yellow'))
+    # the sun's surface in the diagram
+    # is at (0,0) to get better relation 
+    # with the distances
+    ax.add_patch(plt.Circle((-1 * vals[0][1], 0), radius=vals[0][1], color=vals[0][3]))
 
     # get / define the sizing
     xmax = max([ float(x) for x in list(np.transpose(np.array(vals[1:]))[2]) ])
-    plt.xlim(-100, xmax*1.05)
+    plt.xlim(-200, xmax*1.05)
     plt.ylim(-xmax*1.05/10,xmax*1.05/10)
 
     # set aspect 'equal' to have circles - not elipses
