@@ -29,20 +29,21 @@ def get_data_from_csv(fn : str,
     df.sort_values('mio_km_from_sun', axis=0, ascending=True, ignore_index=True, inplace=True)
     return(df)
 
-def gen_planets_as_circles(df: pd.DataFrame) -> (np.array, np.array):
+def gen_planets_as_circles(df: pd.DataFrame, e_factor: int) -> (np.array, np.array):
     # get the values for the objects' plt.Circle
     # and do some scaling so that it fits into a diagram
     vals = [ [obj,
-                   df.loc[df.object == obj, 'diameter_in_km'].to_list()[0]/2 /400,
-                   df.loc[df.object == obj, 'mio_km_from_sun'].to_list()[0],
-                   df.loc[df.object == obj, 'color'].to_list()[0] ]
+              #                                               2: diameter -> radius, 1_000_000: km -> mio_km       
+              df.loc[df.object == obj, 'diameter_in_km'].to_list()[0]/2 /1_000_000 * e_factor,
+              df.loc[df.object == obj, 'mio_km_from_sun'].to_list()[0],
+              df.loc[df.object == obj, 'color'].to_list()[0] ]
              for obj in df.object.to_list() ]
     circles = [ plt.Circle((val[2], 0), radius=val[1], color=val[3]) for val in vals ]
-    return((circles, vals))
+    return(circles, vals)
 
-def gen_diagram(fig: plt.figure, ax: plt.axes, vals: np.array, df: pd.DataFrame) -> plt.figure:
+def gen_diagram(fig: plt.figure, ax: plt.axes, vals: np.array, df: pd.DataFrame, e_factor: int):
     # get the values for the objects' plt.Circle
-    circles, vals = gen_planets_as_circles(df)
+    circles, vals = gen_planets_as_circles(df, e_factor)
     # the planets as Circles
     for p in circles[1:]:
         ax.add_patch(p)
